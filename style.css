@@ -1,0 +1,202 @@
+/* CSS untuk halaman utama */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Retro Gaming', cursive; /* Menggunakan font mirip dengan retro gaming */
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#start-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menyesuaikan gambar agar mengisi seluruh area */
+}
+
+#logo {
+  position: absolute;
+  top: 30%; /* Menggeser logo ke atas sedikit */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Sesuaikan lebar logo sesuai kebutuhan */
+  height: auto;
+}
+
+h1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #ffffff; /* Warna teks putih */
+  text-align: center;
+  animation: bounce 2s infinite alternate; /* Animasi naik turun dengan pelan */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) translateY(-10px); /* Posisi awal dan efek naik turun */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(10px); /* Posisi akhir dan efek naik turun */
+  }
+}
+
+button {
+  font-family: 'Retro Gaming', cursive; /* Tambahkan properti font-family */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: transparent; /* Menghapus latar belakang putih */
+  border: none; /* Menghapus border */
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Efek transisi untuk animasi bounce */
+}
+
+button:hover {
+  animation: bounceHover 0.5s infinite alternate; /* Animasi bounce pada hover */
+}
+
+@keyframes bounceHover {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-5px); /* Posisi akhir dan efek bounce */
+  }
+}
+
+/* CSS untuk halaman informasi permainan */
+#game-info {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+a#start-button {
+  font-family: 'Retro Gaming', cursive; /* Tambahkan properti font-family */
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+a#start-button:hover {
+  background-color: #45a049;
+}
+
+/* style.css */
+
+/* CSS untuk kontainer game */
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 41vh;
+  background-image: url('container.png'); /* Gambar latar belakang */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ganti warna teks di dalam kontainer game menjadi putih */
+#game-container * {
+  color: white;
+}
+
+/* CSS untuk elemen canvas game */
+#gameCanvas {
+  border: 7px solid #215025; /* Garis tepi putih */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks footer */
+  padding: 20px 0; /* Padding atas dan bawah */
+  text-align: center;
+}
+
+/* style.css */
+
+button#home-button {
+  position: fixed;
+  top: 14cap; /* Menempatkan tombol dekat dengan atas layar */
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 999; /* Menempatkan tombol di atas konten lain */
+}
+
+button#home-button:hover {
+  transform: translateY(-5px); /* Efek naik saat hover */
+}
+
+button#home-button:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  animation: bounce 2s infinite alternate; /* Efek bounce saat hover */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-5px); /* Efek naik saat hover */
+  }
+  100% {
+    transform: translateY(5px); /* Efek turun saat hover */
+  }
+}
